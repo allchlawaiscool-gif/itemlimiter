@@ -1,0 +1,23 @@
+# ItemLimiter configuration.
+#
+# Add any item below using its Bukkit Material name, followed by the max
+# total amount a single player may hold at once - counting their whole
+# inventory (main inventory + armor slots + offhand combined).
+#
+# Look up material names here: https://jd.papermc.io/paper/26.1.2/org/bukkit/Material.html
+# (use the enum constant name, e.g. TOTEM_OF_UNDYING, ENDER_PEARL, NETHERITE_INGOT)
+#
+# Example - cap Totems of Undying at 5 per player:
+limits:
+  TOTEM_OF_UNDYING: 5
+
+# Sent to a player whenever excess items are removed from their inventory and
+# dropped on the ground (this covers crafting, chests, /give, other plugins,
+# joining/respawning with too many, etc). This message does NOT fire when a
+# pickup off the ground is blocked - that case is silent by design, since
+# standing next to a pile of blocked items would otherwise spam the same
+# message over and over.
+#
+# Placeholders: %item% %limit%
+# Leave blank ("") to disable this message entirely.
+excess-message: "You can only hold %limit% %item% - the extra was dropped on the ground."

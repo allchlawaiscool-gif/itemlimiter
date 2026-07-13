@@ -1,0 +1,20 @@
+name: ItemLimiter
+version: '1.0.0'
+main: com.itemlimiter.plugin.ItemLimiterPlugin
+description: Caps how many of a specific item a player can hold at once.
+api-version: '26.1.2'
+load: POSTWORLD
+
+commands:
+  itemlimiter:
+    description: Reload the ItemLimiter configuration.
+    usage: /<command> reload
+    permission: itemlimiter.reload
+
+permissions:
+  itemlimiter.bypass:
+    description: Bypass all item limits.
+    default: op
+  itemlimiter.reload:
+    description: Reload the ItemLimiter config.
+    default: op
